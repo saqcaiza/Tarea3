@@ -7,7 +7,6 @@ on:
 
 jobs:
   build-test-deploy:
-
     runs-on: ubuntu-latest
 
     permissions:
@@ -15,7 +14,6 @@ jobs:
       packages: write
 
     steps:
-
     - name: Checkout repository
       uses: actions/checkout@v4
 
@@ -31,9 +29,9 @@ jobs:
 
     - name: Run tests
       run: |
-        pytest
+        pytest test_python.py
 
-    - name: Run applicatio
+    - name: Run application
       run: |
         python app.py
 
@@ -42,10 +40,10 @@ jobs:
         echo "Despliegue exitoso"
 
     - name: Construir la imagen
-      run: docker build -t ghcr.io/isfran2305/proyecto3.0.0 .
+      run: docker build -t ghcr.io/saqcaiza/ejercicio:3.0.0 .
 
     - name: Iniciar sesión en GitHub Container Registry
-      run: echo ${{ secrets.TOKEN_WR}} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      run: echo "${{ secrets.TOKEN_TAREA3 }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Publicar la imagen
-      run: docker push ghcr.io/isfran2305/proyecto3.0.0
+      run: docker push ghcr.io/saqcaiza/ejercicio:3.0.0
