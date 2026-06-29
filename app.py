@@ -66,7 +66,7 @@ def obtener_saludo():
         <div class="tarjeta">
             <h1>¡Mensaje del Sistema!</h1>
             <p>Hola ing pongame 10 no vale instalar el docker</p>
-            <div class="badge">Despliegue Exitoso 🚀</div>
+            <div class="badge">Despliegue Exitoso </div>
         </div>
     </body>
     </html>
