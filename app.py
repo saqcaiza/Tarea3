@@ -1,5 +1,5 @@
 def obtener_saludo():
-    mensaje = "Hola ing pongame 10 no vale isntalar el docker"
+    mensaje = "Hola ing pongame 10 no vale instalar el docker"
     print(mensaje)
     return mensaje
 
