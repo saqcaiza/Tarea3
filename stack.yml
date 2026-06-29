@@ -22,7 +22,7 @@ services:
         - "traefik.http.routers.steeven-secure.rule=Host(`steeven.byronrm.com`)"
         - "traefik.http.routers.steeven-secure.tls=true"
         - "traefik.http.routers.steeven-secure.tls.certresolver=http"
-        - "traefik.http.routers.steeven-secure.service=tecticom"
+        - "traefik.http.routers.steeven-secure.service=steeven"
         - "traefik.http.services.steeven.loadbalancer.server.port=5000"
         - "traefik.docker.network=traefik-public"   
 
